@@ -1,0 +1,30 @@
+{
+  "name": "ez-movie-node",
+  "version": "1.0.0",
+  "description": "A TMDb API wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stuhl/ez-movie-node.git"
+  },
+  "keywords": [
+    "API",
+    "wrapper",
+    "API",
+    "wrapper",
+    "movies",
+    "database"
+  ],
+  "author": "Kaan Aksu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Stuhl/ez-movie-node/issues"
+  },
+  "homepage": "https://github.com/Stuhl/ez-movie-node#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
