@@ -6,7 +6,7 @@ const evaluator = require("./query-evaluator")
 const parser = require("./query-parser")
 const checker = require("./query-checker")
 
-const API_URL = "https://api.themoviedb.org/3/";
+const API_URL = "https://api.themoviedb.org/3/"
 
 const generateEndpoints = self => {
   function methodTemplate(category, method) {
@@ -49,4 +49,4 @@ class EZMovie {
   }
 }
 
-module.exportds = EZMovie
+module.exports = EZMovie
