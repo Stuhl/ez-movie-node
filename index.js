@@ -49,14 +49,4 @@ class EZMovie {
   }
 }
 
-const ezmovie = new EZMovie("dac9aa883d0da24390c85f37d8728aef")
-
-async function main() {
-  const res = await ezmovie.company.alternativeNames({
-    company_id: 1
-  });
-  const body = await res.json()
-  console.log(body)
-}
-
-main()
+module.exportds = EZMovie
