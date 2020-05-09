@@ -274,7 +274,7 @@ const endpoints = {
       },
       endpointPath: "discover/movie"
     },
-    movie: {
+    tv: {
       requestType: "GET",
       params: {
         language: {
