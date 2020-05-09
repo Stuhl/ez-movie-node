@@ -57,7 +57,7 @@ class QueryChecker {
     return fulfilled;
   }
 
-  isAllowedParams(params, definedParams) {
+  isAllowedParams(params = {}, definedParams) {
     const filterNotAllowedParams = () => {
       return Object.keys(params).filter(value => {
         return !Object.keys(definedParams).includes(value);
