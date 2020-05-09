@@ -19,7 +19,7 @@ const generateEndpoints = self => {
       errorHandler.handle(evaluationResponse)
       const parsedString = parser.parse(params, methodObject, evaluationResponse, self.key)
 
-      console.log(`${API_URL}${parsedString}`)
+      // console.log(`${API_URL}${parsedString}`)
 
       return fetch(`${API_URL}${parsedString}`, {
         method: requestType

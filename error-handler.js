@@ -7,7 +7,7 @@ class ErrorHandler {
     const { error } = evaluationObj;
     const params = this.getParams(error.params);
 
-    console.log(evaluationObj);
+    // console.log(evaluationObj);
 
     if (error.type === "required params missing") {
       throw new Error(`Missing required params. The params are: ${params}`);
