@@ -3,11 +3,10 @@ class QueryParser {
     const apiString = `?api_key=${APIKey}&`;
 
     if (!evaluationObj.useParameter) {
-      return methodObj.endpointPath + apiString;
+      return methodObj.endpointPath + apiString.slice(0, -1);
     }
 
     if (evaluationObj.injectableParam) {
-      console.log(evaluationObj);
       const paramValue = params[evaluationObj.injectableParam];
       const injectedString = methodObj.endpointPath.replace(
         /\{(\w+)\}/,
