@@ -169,7 +169,7 @@ const endpoints = {
         }
       },
       endpointPath: "credit/{credit_id}"
-    },
+    }
   },
   discover: {
     movie: {
@@ -359,7 +359,7 @@ const endpoints = {
         }
       },
       endpointPath: "find/{external_id}"
-    },
+    }
   },
   genre: {
     movies: {
@@ -405,8 +405,561 @@ const endpoints = {
         },
       },
       endpointPath: "genre/tv/list"
+    }
+  },
+  movie: {
+    details: {
+      requestType: "GET",
+      params: {
+        movie_id: {
+          isRequired: true
+        },
+        language: {
+          isRequired: false
+        },
+        append_to_response: {
+          isRequired: false
+        }
+      },
+      endpointPath: "movie/{movie_id}"
     },
-  }
+    alternativeTitles: {
+      requestType: "GET",
+      params: {
+        movie_id: {
+          isRequired: true
+        },
+        country: {
+          isRequired: false
+        }
+      },
+      endpointPath: "movie/{movie_id}/alternative_titles"
+    },
+    changes: {
+      requestType: "GET",
+      params: {
+        movie_id: {
+          isRequired: true
+        },
+        start_date: {
+          isRequired: false
+        },
+        end_date: {
+          isRequired: false
+        },
+        page: {
+          isRequired: false
+        }
+      },
+      endpointPath: "movie/{movie_id}/changes"
+    },
+    credits: {
+      requestType: "GET",
+      params: {
+        movie_id: {
+          isRequired: true
+        }
+      },
+      endpointPath: "movie/{movie_id}/credits"
+    },
+    externalIDs: {
+      requestType: "GET",
+      params: {
+        movie_id: {
+          isRequired: true
+        }
+      },
+      endpointPath: "movie/{movie_id}/external_ids"
+    },
+    images: {
+      requestType: "GET",
+      params: {
+        movie_id: {
+          isRequired: true
+        },
+        language: {
+          isRequired: false
+        },
+        include_image_language: {
+          isRequired: false
+        }
+      },
+      endpointPath: "movie/{movie_id}/images"
+    },
+    keywords: {
+      requestType: "GET",
+      params: {
+        movie_id: {
+          isRequired: true
+        }
+      },
+      endpointPath: "movie/{movie_id}/keywords"
+    },
+    releaseDate: {
+      requestType: "GET",
+      params: {
+        movie_id: {
+          isRequired: true
+        }
+      },
+      endpointPath: "movie/{movie_id}/release_dates"
+    },
+    videos: {
+      requestType: "GET",
+      params: {
+        movie_id: {
+          isRequired: true
+        },
+        language: {
+          isRequired: false
+        }
+      },
+      endpointPath: "movie/{movie_id}/videos"
+    },
+    translations: {
+      requestType: "GET",
+      params: {
+        movie_id: {
+          isRequired: true
+        }
+      },
+      endpointPath: "movie/{movie_id}/translations"
+    },
+    recommendations: {
+      requestType: "GET",
+      params: {
+        movie_id: {
+          isRequired: true
+        },
+        language: {
+          isRequired: false
+        },
+        page: {
+          isRequired: false
+        }
+      },
+      endpointPath: "movie/{movie_id}/recommendations"
+    },
+    similar: {
+      requestType: "GET",
+      params: {
+        movie_id: {
+          isRequired: true
+        },
+        language: {
+          isRequired: false
+        },
+        page: {
+          isRequired: false
+        }
+      },
+      endpointPath: "movie/{movie_id}/similar"
+    },
+    reviews: {
+      requestType: "GET",
+      params: {
+        movie_id: {
+          isRequired: true
+        },
+        language: {
+          isRequired: false
+        },
+        page: {
+          isRequired: false
+        }
+      },
+      endpointPath: "movie/{movie_id}/reviews"
+    },
+    lists: {
+      requestType: "GET",
+      params: {
+        movie_id: {
+          isRequired: true
+        },
+        language: {
+          isRequired: false
+        },
+        page: {
+          isRequired: false
+        }
+      },
+      endpointPath: "movie/{movie_id}/lists"
+    },
+    latest: {
+      requestType: "GET",
+      params: {
+        language: {
+          isRequired: false
+        }
+      },
+      endpointPath: "movie/latest"
+    },
+    nowPlaying: {
+      requestType: "GET",
+      params: {
+        language: {
+          isRequired: false
+        },
+        page: {
+          isRequired: false
+        },
+        region: {
+          isRequired: false
+        }
+      },
+      endpointPath: "movie/now_playing"
+    },
+    popular: {
+      requestType: "GET",
+      params: {
+        language: {
+          isRequired: false
+        },
+        page: {
+          isRequired: false
+        },
+        region: {
+          isRequired: false
+        }
+      },
+      endpointPath: "movie/popular"
+    },
+    topRated: {
+      requestType: "GET",
+      params: {
+        language: {
+          isRequired: false
+        },
+        page: {
+          isRequired: false
+        },
+        region: {
+          isRequired: false
+        }
+      },
+      endpointPath: "movie/top_rated"
+    },
+    upcoming: {
+      requestType: "GET",
+      params: {
+        language: {
+          isRequired: false
+        },
+        page: {
+          isRequired: false
+        },
+        region: {
+          isRequired: false
+        }
+      },
+      endpointPath: "movie/upcoming"
+    }
+  },
+  network: {
+    details: {
+      requestType: "GET",
+      params: {
+        network_id: {
+          isRequired: true
+        }
+      },
+      endpointPath: "network/{network_id}"
+    },
+    alternativeNames: {
+      requestType: "GET",
+      params: {
+        network_id: {
+          isRequired: true
+        }
+      },
+      endpointPath: "network/{network_id}/alternative_names"
+    },
+    images: {
+      requestType: "GET",
+      params: {
+        network_id: {
+          isRequired: true
+        }
+      },
+      endpointPath: "network/{network_id}/images"
+    }
+  },
+  people: {
+    details: {
+      requestType: "GET",
+      params: {
+        person_id: {
+          isRequired: true
+        },
+        language: {
+          isRequired: false
+        },
+        append_to_response: {
+          isRequired: false
+        }
+      },
+      endpointPath: "person/{person_id}"
+    },
+    changes: {
+      requestType: "GET",
+      params: {
+        person_id: {
+          isRequired: true
+        },
+        end_date: {
+          isRequired: false
+        },
+        page: {
+          isRequired: false
+        },
+        start_date: {
+          isRequired: false
+        }
+      },
+      endpointPath: "person/{person_id}/changes"
+    },
+    movieCredits: {
+      requestType: "GET",
+      params: {
+        person_id: {
+          isRequired: true
+        },
+        language: {
+          isRequired: false
+        }
+      },
+      endpointPath: "person/{person_id}/movie_credits"
+    },
+    tvCredits: {
+      requestType: "GET",
+      params: {
+        person_id: {
+          isRequired: true
+        },
+        language: {
+          isRequired: false
+        }
+      },
+      endpointPath: "person/{person_id}/tv_credits"
+    },
+    combinedCredits: {
+      requestType: "GET",
+      params: {
+        person_id: {
+          isRequired: true
+        },
+        language: {
+          isRequired: false
+        }
+      },
+      endpointPath: "person/{person_id}/combined_credits"
+    },
+    externalIDs: {
+      requestType: "GET",
+      params: {
+        person_id: {
+          isRequired: true
+        },
+        language: {
+          isRequired: false
+        }
+      },
+      endpointPath: "person/{person_id}/external_ids"
+    },
+    images: {
+      requestType: "GET",
+      params: {
+        person_id: {
+          isRequired: true
+        }
+      },
+      endpointPath: "person/{person_id}/images"
+    },
+    taggedImages: {
+      requestType: "GET",
+      params: {
+        person_id: {
+          isRequired: true
+        },
+        language: {
+          isRequired: false
+        },
+        page: {
+          isRequired: false
+        }
+      },
+      endpointPath: "person/{person_id}/tagged_images"
+    },
+    translations: {
+      requestType: "GET",
+      params: {
+        person_id: {
+          isRequired: true
+        },
+        language: {
+          isRequired: false
+        }
+      },
+      endpointPath: "person/{person_id}/translations"
+    },
+    latest: {
+      requestType: "GET",
+      params: {
+        language: {
+          isRequired: false
+        }
+      },
+      endpointPath: "person/latest"
+    },
+    popular: {
+      requestType: "GET",
+      params: {
+        language: {
+          isRequired: false
+        },
+        page: {
+          isRequired: false
+        }
+      },
+      endpointPath: "person/popular"
+    }
+  },
+  review: {
+    details: {
+      requestType: "GET",
+      params: {
+        review_id: {
+          isRequired: true
+        }
+      },
+      endpointPath: "review/{review_id}"
+    }
+  },
+  search: {
+    companies: {
+      requestType: "GET",
+      params: {
+        query: {
+          isRequired: true
+        },
+        page: {
+          isRequired: false
+        }
+      },
+      endpointPath: "search/company"
+    },
+    collections: {
+      requestType: "GET",
+      params: {
+        query: {
+          isRequired: true
+        },
+        language: {
+          isRequired: false
+        },
+        page: {
+          isRequired: false
+        }
+      },
+      endpointPath: "search/collection"
+    },
+    keywords: {
+      requestType: "GET",
+      params: {
+        query: {
+          isRequired: true
+        },
+        page: {
+          isRequired: false
+        }
+      },
+      endpointPath: "search/keyword"
+    },
+    movies: {
+      requestType: "GET",
+      params: {
+        query: {
+          isRequired: true
+        },
+        page: {
+          isRequired: false
+        },
+        include_adult: {
+          isRequired: false
+        },
+        region: {
+          isRequired: false
+        },
+        year: {
+          isRequired: false
+        },
+        primary_release_date: {
+          isRequired: false
+        }
+      },
+      endpointPath: "search/movie"
+    },
+    multiSearch: {
+      requestType: "GET",
+      params: {
+        query: {
+          isRequired: true
+        },
+        language: {
+          isRequired: false
+        },
+        page: {
+          isRequired: false
+        },
+        include_adult: {
+          isRequired: false
+        },
+        region: {
+          isRequired: false
+        }
+      },
+      endpointPath: "search/multi"
+    },
+    searchPerson: {
+      requestType: "GET",
+      params: {
+        query: {
+          isRequired: true
+        },
+        page: {
+          isRequired: false
+        },
+        include_adult: {
+          isRequired: false
+        },
+        region: {
+          isRequired: false
+        }
+      },
+      endpointPath: "search/person"
+    },
+    searchTV: {
+      requestType: "GET",
+      params: {
+        query: {
+          isRequired: true
+        },
+        language: {
+          isRequired: false
+        },
+        page: {
+          isRequired: false
+        },
+        include_adult: {
+          isRequired: false
+        },
+        first_air_date_year: {
+          isRequired: false
+        }
+      },
+      endpointPath: "search/tv"
+    }
+  },
 }
 
 module.exports = endpoints
