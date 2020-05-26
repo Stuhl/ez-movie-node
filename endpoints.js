@@ -205,6 +205,9 @@ const endpoints = {
         page: {
           isRequired: false
         },
+        primary_release_year: {
+          isRequired: false
+        },
         "primary_release_date.gte": {
           isRequired: false
         },
