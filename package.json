@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/Stuhl/ez-movie-node#readme",
   "dependencies": {
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^3.1.1"
   },
   "devDependencies": {
     "jest": "^26.0.1"
